@@ -1,0 +1,33 @@
+generated: '2026-07-19'
+method: searched
+source: https://support.quest.com/technical-documents/kace-systems-management-appliance/15.0/api-reference-guide
+docs: https://support.quest.com/technical-documents/kace-systems-management-appliance/15.0/api-reference-guide
+summary:
+  types:
+  - session
+  note: >-
+    The KACE SMA REST API uses session-based authentication limited to authenticated KACE SMA
+    users. There are no OAuth2 flows or long-lived API keys documented; a client logs in with an
+    appliance user's credentials to establish an authenticated session against the customer-hosted
+    appliance host.
+schemes:
+- name: kaceSessionLogin
+  type: session
+  scheme: credentials-login
+  login_endpoint: POST /ams/shared/api/security/login
+  login_body:
+  - user name
+  - password
+  - organization (optional, for organization-enabled appliances)
+  sources:
+  - docs
+required_headers:
+- name: Accept
+  purpose: Select response format (application/json or application/xml)
+- name: Content-Type
+  purpose: Declare request payload format (JSON or XML) on POST/PUT
+- name: x-kace-api-version
+  purpose: Select the API route version implementation (e.g. "1"); most recent used if unavailable
+notes:
+- The API runs on the customer-hosted KACE SMA appliance; there is no shared public production host.
+- Access is limited to authenticated KACE SMA users; permissions follow the appliance user's role.
