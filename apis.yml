@@ -1,27 +1,93 @@
 aid: kace
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/kace.png
 name: Kace
-description: 'Kace is a company surfaced as a portfolio company of norwest-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  KACE is the endpoint and systems management product line from Quest Software, originally
+  founded in 2003 as KACE Networks (backed by Norwest Venture Partners, Sigma Partners, and
+  Focus Ventures), acquired by Dell in 2010, and now sold as Quest KACE. The portfolio centers
+  on the KACE Systems Management Appliance (SMA) for inventory, patching, software distribution,
+  scripting, and service desk; the KACE Systems Deployment Appliance (SDA) for OS imaging and
+  provisioning; and KACE Cloud for mobile device management and modern endpoint management.
+  The KACE SMA ships a REST API (JSON and XML) that lets administrators programmatically manage
+  assets, inventory, managed installations, scripting, users, and service-desk tickets on the
+  customer-hosted appliance. This profile enriches the original Norwest portfolio lead with the
+  real Quest KACE identity and its documented API surface.
 url: https://raw.githubusercontent.com/api-evangelist/kace/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - norwest-venture-partners
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: enriched
+x-tier-reason: acquired-by-dell-2010-now-quest-kace
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-- Unknown
-apis: []
+- Endpoint Management
+- Systems Management
+- IT Asset Management
+- Patch Management
+- Service Desk
+- Device Management
+- Quest Software
+apis:
+- name: KACE Systems Management Appliance (SMA) API
+  description: >-
+    REST API for the KACE Systems Management Appliance. Authenticated KACE SMA users can manage
+    appliance data across the Asset, Inventory, Managed Install, Scripting, User, and Service Desk
+    modules. Requests and responses support JSON and XML (selected via Accept / Content-Type), with
+    API routing controlled by an x-kace-api-version header and query features for filtering, sorting,
+    paging, shaping, and counting. The API runs on the customer-hosted appliance, so the base URL is
+    the local appliance host (https://<kace_sma_host>/ams/); there is no shared public production host.
+  humanURL: https://support.quest.com/technical-documents/kace-systems-management-appliance/15.0/api-reference-guide
+  properties:
+  - type: APIReference
+    url: https://support.quest.com/technical-documents/kace-systems-management-appliance/15.0/api-reference-guide
+  - type: Authentication
+    url: https://raw.githubusercontent.com/api-evangelist/kace/refs/heads/main/authentication/kace-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/kace-domain-security.yml
 - type: Website
-  url: https://kace.com
+  url: https://www.quest.com/kace/
+- type: DeveloperPortal
+  url: https://www.quest.com/kace/
+- type: Documentation
+  url: https://support.quest.com/kace-systems-management-appliance/technical-documents
+- type: APIReference
+  url: https://support.quest.com/technical-documents/kace-systems-management-appliance/15.0/api-reference-guide
+- type: Support
+  url: https://support.quest.com/kace-systems-management-appliance
+- type: Authentication
+  url: https://raw.githubusercontent.com/api-evangelist/kace/refs/heads/main/authentication/kace-authentication.yml
+- type: Lifecycle
+  url: lifecycle/kace-lifecycle.yml
+- type: Deprecation
+  url: https://support.quest.com/kb/4268357/kace-software-product-support-lifecycle-policy
+- type: Conformance
+  url: conformance/kace-conformance.yml
+- type: LLMsTxt
+  url: llms/kace-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

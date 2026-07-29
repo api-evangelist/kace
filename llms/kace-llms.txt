@@ -1,0 +1,21 @@
+# KACE (Quest KACE)
+
+> KACE is the endpoint and systems management product line from Quest Software — originally KACE Networks (founded 2003, backed by Norwest Venture Partners), acquired by Dell in 2010, now sold as Quest KACE. It spans the KACE Systems Management Appliance (SMA), the Systems Deployment Appliance (SDA), and KACE Cloud. The KACE SMA exposes a REST API (JSON and XML) for managing assets, inventory, managed installs, scripting, users, and service-desk tickets on the customer-hosted appliance.
+
+## APIs
+
+- [KACE SMA API Reference Guide](https://support.quest.com/technical-documents/kace-systems-management-appliance/15.0/api-reference-guide): REST API for the KACE Systems Management Appliance (Asset, Inventory, Managed Install, Scripting, User, Service Desk modules)
+
+## Docs
+
+- [Product page](https://www.quest.com/kace/): Quest KACE endpoint and systems management overview
+- [Technical documents](https://support.quest.com/kace-systems-management-appliance/technical-documents): KACE SMA administrator and API documentation
+- [Support portal](https://support.quest.com/kace-systems-management-appliance): KACE SMA product support
+- [Product Life Cycle table](https://support.quest.com/kace-systems-management-appliance/lifecycle): supported appliance versions and end-of-life phases
+
+## Artifacts
+
+- [Authentication profile](https://raw.githubusercontent.com/api-evangelist/kace/refs/heads/main/authentication/kace-authentication.yml): session-login auth model and required headers
+- [Lifecycle](https://raw.githubusercontent.com/api-evangelist/kace/refs/heads/main/lifecycle/kace-lifecycle.yml): versioning and support policy
+- [Conformance](https://raw.githubusercontent.com/api-evangelist/kace/refs/heads/main/conformance/kace-conformance.yml): standards conformance summary
+- [Domain security](https://raw.githubusercontent.com/api-evangelist/kace/refs/heads/main/security/kace-domain-security.yml): TLS/DNS security probe

@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: https://support.quest.com/kace-systems-management-appliance/lifecycle
+versioning:
+  scheme: appliance-release + api-version-header
+  current: '15.0'
+  api_version_header: x-kace-api-version
+  docs: https://support.quest.com/technical-documents/kace-systems-management-appliance/15.0/api-reference-guide
+  note: >-
+    The KACE SMA is versioned by appliance release (11.x through 15.x are the recent line). Within
+    the REST API, the x-kace-api-version request header selects the route implementation version;
+    if a requested version does not exist, the appliance executes the most recent available version.
+support_policy:
+  url: https://support.quest.com/kb/4268357/kace-software-product-support-lifecycle-policy
+  policy: >-
+    Quest supports the current (n) and prior (n-1) generally available releases. A Continuing
+    Support service offers up to one year of limited support beyond end-of-life for products
+    without Long Term Support releases. Appliance hardware warranty support is available up to
+    five years from date of purchase.
+lifecycle_table: https://support.quest.com/kace-systems-management-appliance/lifecycle
+deprecation:
+  policy_url: https://support.quest.com/kb/4268357/kace-software-product-support-lifecycle-policy
+  note: >-
+    Support tracks generally-available, end-of-life, and continuing-support phases per appliance
+    version via the published Product Life Cycle table. No RFC 8594 Sunset/Deprecation response
+    headers are documented for the API itself.
+status_page: null

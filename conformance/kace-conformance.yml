@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: derived
+source: https://support.quest.com/technical-documents/kace-systems-management-appliance/15.0/api-reference-guide
+standards:
+- id: rest
+  conforms: true
+  evidence: HTTP resource API over Asset/Inventory/Managed Install/Scripting/User/Service Desk modules
+- id: json
+  conforms: true
+  evidence: Accept/Content-Type application/json supported for requests and responses
+- id: xml
+  conforms: true
+  evidence: Accept/Content-Type application/xml supported for requests and responses
+- id: oauth2
+  conforms: false
+  evidence: session-login authentication only; no OAuth2 flows documented
+- id: oidc
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: no application/problem+json error envelope documented
+- id: pagination
+  conforms: true
+  evidence: API documents paging along with filtering, sorting, shaping, and counting
