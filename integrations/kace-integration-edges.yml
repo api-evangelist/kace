@@ -1,0 +1,38 @@
+edges:
+- partner_name: Android Enterprise (Google partner program)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://androidenterprisepartners.withgoogle.com/emm/
+  category: Android Enterprise solution partner
+  contract_reference:
+    register: Android Enterprise Solutions Directory (androidenterprisepartners.withgoogle.com /api/search/products)
+    standard: Android Enterprise Recommended
+    spec_file: null
+    role: android-enterprise-partner
+    registered_name: Quest KACE
+    register_id: a2FHs000005cSQEMA2
+    matched_domain: quest.com
+    matched_by: domain+name-among-holders
+    product_types:
+    - EMM
+    products_sample:
+    - Quest KACE
+    signal_note: listing = participation; certified_products = ONE entry per product type Google validated against
+      the Android Enterprise Recommended requirements (badge on the listing); the directory carries current validations
+      only, so lapsed is always false; partner_tier is the program badge (Gold / Silver), recorded, never counted
+    detected_by: sweep-device-management.py
+    detected: '2026-10-20'
+  detected_by: sweep-device-management.py
+  detected: '2026-10-20'
+generated: '2026-10-20'
+method: searched
+source:
+- https://androidenterprisepartners.withgoogle.com/api/search/products?aesd_product_type=EMM
+- https://androidenterprisepartners.withgoogle.com/emm/
+checked:
+- https://androidenterprisepartners.withgoogle.com/api/search/products?aesd_product_type=EMM
+- https://androidenterprisepartners.withgoogle.com/emm/
